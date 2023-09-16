@@ -16,3 +16,8 @@
     #start, #status{
         font-size: 22px;
     }
+#restart
+{
+    text-align: center;
+    font-size: 22px;
+}

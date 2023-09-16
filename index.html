@@ -18,7 +18,7 @@
         <center>
             <div class="btn btn-primary heading">
                 <h3>AI My Melody Ping Pong</h3>
-                <button class="btn btn-primary">My Melody!</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Instructions</button>
             </div>
             <script src="main.js"></script>
 
@@ -26,8 +26,42 @@
       <br><br>
       <button class="btn btn-success" onclick="startGame()" id="start">Play Game</button>
       <br><br>
+      <button class="btn btn-warning" onclick="restart()" id="restart">Restart</button>
+      <br><br>
       <h3 id="status" class="btn btn-warning"></h3>
       <br><br>
+
+      <div id="myModal" class="modal fade ">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">&times;</button>
+              <h4>Instructions</h4>
+            </div>
+
+            <div class="modal-body">
+              How to play Ping Pong.
+              <ol>
+                <li>
+                    The Ai modal will identify the location of your wrist, Please keep it in the frame for it to identify
+                </li>
+                <li>
+                    Your wrist should be 3-4 ft away from your camera
+                </li>
+                <li>
+                    There should be a red dot showing up on the Web camera located on your right wrist
+                </li>
+                <li>
+                    Move your RIGHT wrist up and down to move your ping pong paddle (red paddle)
+                </li>
+                <li>
+                    AND MOST IMPORTANTLY HAVE FUN!!!
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="canvas"></div>
       <div id="game_console"></div>
         </center>
