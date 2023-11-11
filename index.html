@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Ping Pong</title>
+        <title>AI Ping-Pong Game</title>
+ 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -11,61 +12,52 @@
         <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>   
-
     </head>
-    <body background="Background.webp" >
+    <body background="my melody.jpg">
         <center>
+
             <div class="btn btn-primary heading">
-                <h3>AI Ping Pong</h3>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Instructions</button>
+              <h3>AI PING PONG GAME </h3>
+              <button class="btn btn-primary"  data-toggle="modal" data-target="#myModal">Instruction</button>
             </div>
-            <script src="main.js"></script>
-
-            <img src="my melody.jpg" class="big_image">
-      <br><br>
-      <button class="btn btn-success" onclick="startGame()" id="start">Play Game</button>
-      <br><br>
-      <button class="btn btn-warning" onclick="restart()" id="restart">Restart</button>
-      <br><br>
-      <h3 id="status" class="btn btn-warning"></h3>
-      <br><br>
-      <h4>
-        Inspiration: MY BRAIN (Sanrio Company, LTD)|| Game Credit : Ping Pong (Sanrio Company, LTD) || Amazing Ideas : Byju's Amazing Team!
-      </h4>
-
-      <div id="myModal" class="modal fade ">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button class="close" data-dismiss="modal">&times;</button>
-              <h4>Instructions</h4>
+      
+            <br><br>
+            <button class="btn btn-success" onclick="startGame()" id="start">Play Game</button>
+            <br><br>
+            <h3 id="status" class="btn btn-default"></h3>
+            <br><br>
+            <div id="canvas"></div>
+            <br><br>
+            <button onclick="restart()" class="btn btn-danger" id="restart">Restart</button>
+            <br><br>
+            
+            <h4 id="footer">Developed By : Sophie Tuan</h4>
+        
+            <div id="myModal" class="modal fade ">
+              <div class="modal-dialog" >
+                <!-- Modal content-->
+                <div class="modal-content">
+            
+                  <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h3>Instructions</h#>
+                  </div>
+            
+                   <div class="modal-body">
+                       <ol>
+                           <li>First keep your laptop screen straight</li>
+                           <li>Move yourself approximately 3-4 feet away from the laptop</li>
+                           <li>Move your right wrist in an ascending and decending manner, a red dot should appear on your right wrist</li>
+                           <li>Now press the play button, and again move yourself 3-4 feet away from laptop</li>
+                           <li>The red paddel is your paddel, that will move as per the movement of your right wrist</li>
+                       </ol>
+                    </div>
+      
+                </div>
+              </div>
             </div>
+      </center>
 
-            <div class="modal-body">
-              How to play Ping Pong.
-              <ol>
-                <li>
-                    The Ai modal will identify the location of your wrist, Please keep it in the frame for it to identify
-                </li>
-                <li>
-                    Your wrist should be 3-4 ft away from your camera
-                </li>
-                <li>
-                    There should be a red dot showing up on the Web camera located on your right wrist
-                </li>
-                <li>
-                    Move your RIGHT wrist up and down to move your ping pong paddle (red paddle)
-                </li>
-                <li>
-                    AND MOST IMPORTANTLY HAVE FUN!!!
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="canvas"></div>
-      <div id="game_console"></div>
-        </center>
-    </body>
+<script src="main.js"></script>
+</body>
 </html>
